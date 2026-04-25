@@ -231,7 +231,7 @@ export function OrganizerDashboard() {
                 ) : upcomingEvents.length > 0 ? (
                   <div className="space-y-4">
                     {upcomingEvents.map((event) => {
-                      const category = CATEGORIES.find(c => c.id === event.categoryId);
+                      
                       const participants = participantsMap[event.id] || 0;
 
                       return (

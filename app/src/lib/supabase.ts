@@ -1,10 +1,9 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 
-export const isSupabaseConfigured = () => {
-  return Boolean(
-    import.meta.env.VITE_SUPABASE_URL &&
-    import.meta.env.VITE_SUPABASE_ANON_KEY
-  )
+export function isSupabaseConfigured(): boolean {
+  const url = import.meta.env.VITE_SUPABASE_URL
+  const key = import.meta.env.VITE_SUPABASE_ANON_KEY
+  return Boolean(url && key)  // make sure this line exists
 }
 
 let _client: SupabaseClient | null = null
@@ -31,6 +30,6 @@ function getClient(): SupabaseClient {
 /** Use this for all DB/auth calls. Client is created on first use (only when app is configured). */
 export const supabase = new Proxy({} as SupabaseClient, {
   get(_, prop) {
-    return (getClient() as Record<string, unknown>)[prop as string]
+    return (getClient() as unknown as Record<string, unknown>)[prop as string]
   },
 })

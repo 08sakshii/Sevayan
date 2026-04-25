@@ -79,7 +79,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, session) => {
       // Refresh failures can leave a stale/invalid token in storage. Clean it up globally.
-      if (event === 'TOKEN_REFRESH_FAILED') {
+      if (event as string === 'TOKEN_REFRESH_FAILED') {
         try {
           await supabase.auth.signOut({ scope: 'local' });
         } catch {

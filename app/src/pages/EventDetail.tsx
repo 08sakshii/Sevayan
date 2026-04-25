@@ -109,7 +109,7 @@ export function EventDetail() {
     );
   }
 
-  const category = CATEGORIES.find(c => c.id === event.categoryId);
+
   const daysLeft = getDaysLeft(event.date);
 
   return (
