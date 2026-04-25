@@ -68,7 +68,7 @@ export function Categories() {
         {/* Category Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {CATEGORIES.map((category) => {
-            const Icon = iconMap[category.icon] || Sparkles;
+            const Icon = (category.icon && iconMap[category.icon]) || Sparkles;
             
             return (
               <Card

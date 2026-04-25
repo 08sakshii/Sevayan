@@ -17,7 +17,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useEvents } from '@/hooks/useEvents';
 import { useAuth } from '@/hooks/useAuth';
 import type { Event } from '@/types';
-import { CATEGORIES, PLACEHOLDER_EVENT_IMAGE } from '@/constants';
+import { PLACEHOLDER_EVENT_IMAGE } from '@/constants';
 
 export function EventDetail() {
   const { id } = useParams<{ id: string }>();

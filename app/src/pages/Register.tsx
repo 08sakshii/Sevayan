@@ -102,14 +102,14 @@ export function Register() {
                   aria-labelledby="register-role-legend"
                 >
                   <div className="flex items-center space-x-2 border rounded-lg p-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                    <RadioGroupItem value="USER" id="register-role-user" name="role" />
+                    <RadioGroupItem value="USER" id="register-role-user"  />
                     <Label htmlFor="register-role-user" className="cursor-pointer flex items-center">
                       <User className="w-4 h-4 mr-2" />
                       Volunteer
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2 border rounded-lg p-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                    <RadioGroupItem value="ORGANIZER" id="register-role-organizer" name="role" />
+                    <RadioGroupItem value="ORGANIZER" id="register-role-organizer" />
                     <Label htmlFor="register-role-organizer" className="cursor-pointer flex items-center">
                       <Building2 className="w-4 h-4 mr-2" />
                       Organizer
