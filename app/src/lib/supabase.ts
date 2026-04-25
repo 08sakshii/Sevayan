@@ -25,6 +25,7 @@ function getClient(): SupabaseClient {
       storageKey: 'seva-auth-token',
     },
   })
+   return _client
 }
 
 /** Use this for all DB/auth calls. Client is created on first use (only when app is configured). */
