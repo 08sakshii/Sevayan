@@ -8,7 +8,6 @@ This document describes the folder structure, what each part does, and how the a
 
 ```
 Kimi_Agent_Seva/
-├── package.json                 # Root scripts: dev, build, supabase
 ├── SUPABASE_SETUP.md            # How to set up Supabase and .env
 ├── PROJECT_STRUCTURE_AND_WORKFLOW.md   # This file
 ├── app/                         # Frontend app (Vite + React)
