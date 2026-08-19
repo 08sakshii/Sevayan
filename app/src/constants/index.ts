@@ -74,8 +74,8 @@ export const CATEGORY_SUBTYPES: Record<string, string[]> = {
 };
 
 export const PLATFORM_STATS = {
-  totalEvents: 500,
-  totalVolunteers: 10000,
+  totalEvents: 50+,
+  totalVolunteers: 5000,
   citiesCovered: 36,
 };
 
